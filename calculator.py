@@ -9,13 +9,13 @@ def divide(a,b):
 
 if __name__ == '__main__':
     print('\n첫번쨰 숫자를 입력하세요.')
-    input1 = input('입력: ')
+    input1 = float(input('입력: '))
     
     print('\n원하는 사칙연산 기호 중 하나를 선택하세요. (+, -, *, /)')
     act = input('기호: ')
     
-    print('\n두두번쨰 숫자를 입력하세요.')
-    input2 = input('입력: ')
+    print('\n두번쨰 숫자를 입력하세요.')
+    input2 = float(input('입력: '))
     
     
     if act =='+':
