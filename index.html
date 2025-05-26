@@ -7,9 +7,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Vercel 앱 테스트</h1>
+    <h1 id="main-title">Vercel 앱 테스트</h1>
     <p>이 앱은 Vercel에서 호스팅되고 있습니다.</p>
     <p>현재 시간: <span id="datetime"></span></p>
-    <script src="script.js"></script>
+    <!-- 새로운 버튼 추가 -->
+    <button id="change-ui-btn">UI 변경</button>
+    <script>
+      // 기존 시간 표시 기능
+      function updateDateTime() {
+        document.getElementById("datetime").textContent =
+          new Date().toLocaleString();
+      }
+      setInterval(updateDateTime, 1000);
+      updateDateTime();
+
+      // UI 변경 기능
+      document.getElementById("change-ui-btn").onclick = function () {
+        const title = document.getElementById("main-title");
+        title.textContent = "UI가 변경되었습니다!";
+        title.style.color = "#0070f3";
+        title.style.transition = "color 0.3s";
+      };
+    </script>
   </body>
 </html>
